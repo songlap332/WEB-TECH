@@ -1,0 +1,20 @@
+#nameError{
+    display:inline;
+    color:red;
+}
+#phnError{
+    display:inline;
+    color:red;
+}
+#emailError{
+    display:inline;
+    color:red;
+}
+#idError{
+    display:inline;
+    color:red;
+}
+#passError{
+    display:inline;
+    color:red;
+}
