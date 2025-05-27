@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../MyCss/task.css">
+<title>Registration</title>
+</head>
+
+<body>
+<form id="myForm" action="/action_page.php" target="_blank" autocomplete="on" method="get" onsubmit="return validateForm()">
+
+<table>
+
+<tr align="left">
+<td>
+<h3>A Book Library</h3>
+</td>
+</tr>
+
+<tr align="center">
+<td id="zindex">
+<input type="image" src="regimg.png" width="1315" height="48">
+</td>
+</tr>
+
+<tr align="left">
+<td>
+<input type="image" src="book.png" width="100" height="100">
+</td>
+</tr>
+
+<tr align="center">
+<td>
+<h2>REGISTRATION FORM</h2>
+</td>
+</tr>
+
+<tr align="center">
+<td>
+<fieldset class="first">
+    <legend id="legend1">Personal Information</legend>
+<table>
+<tr>
+<td>
+    <label id="fname" for="fullname">Full name:<sup>*</sup></label>
+</td>
+<td>
+    <input type="text" id="fullname" name="fullname"> &nbsp;<p id="nameError"></p><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="gender">Gender:<sup>*</sup></label>
+</td>
+<td>
+    <input type="radio" id="gender" name="gender" value="male">Male
+    <input type="radio" id="gender" name="gender" value="female">Female<br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="date">Date of Birth:<sup>*</sup></label>
+</td>
+<td>
+    <input type="date" id="date" name="date"><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="tele">Contact Number:</label>
+</td>
+<td>
+    <input type="tel" id="tele" name="tele" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"> &nbsp;<p id="phnError"></p><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="email">Email Address:<sup>*</sup></label>
+</td>
+<td>
+    <input type="email" id="email" name="email"> &nbsp;<p id="emailError"></p><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="national id">National ID/Passport Number:<sup>*</sup></label>
+</td>
+<td>
+    <input type="text" id="national id" name="national id"> &nbsp;<p id="idError"></p><br>
+</td>
+</tr>
+
+<tr>
+<td id="t>
+    <label for="photo">Photo:<sup>*</sup></label>
+</td>
+<td>
+    <input type="file" id="photo" name="photo"> <br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="address">Address:<sup>*</sup></label>
+</td>
+<td>
+    <textarea name="address" rows="3" cols="22"></textarea><br>
+</td>
+</tr>
+</table>
+</fieldset>
+</td>
+</tr>
+
+<tr align="center">
+<td>
+<fieldset class="second">
+<legend id="legend2">Professional Information</legend>
+<table>
+<tr>
+<td>
+    <label for="admin id">Admin ID:<sup>*</sup></label>
+</td>
+<td>
+    <input type="text" id="admin id" name="admin id"><br>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="designation">Designation:<sup>*</sup></label>
+</td>
+<td>
+<select id="designation" name="designation">
+  <option value="option">Select</option>
+  <option value="librarian">Librarian</option>
+  <option value="assistant librarian">Assistant Librarian</option>
+  <option value="system admin">System Admin</option>
+</select><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="join date">Date of Joining:<sup>*</sup></label>
+</td>
+<td>
+    <input type="date" id="join date" name="join date"><br>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="Department">Department:<sup>*</sup></label>
+</td>
+<td>
+<select id="department" name="department">
+  <option value="option">Select</option>
+  <option value="it">IT</option>
+  <option value="cataloging">Cataloging</option>
+  <option value="circulation">Circulation</option>
+</select><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="work schedule">Work Schedule:<sup>*</sup></label>
+</td>
+<td>
+    <input type="radio" id="work schedule" name="work schedule" value="full-time">Full-time
+    <input type="radio" id="work schedule" name="work schedule" value="part-time">Part-time<br>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="qualifications">Qualifications:<sup>*</sup></label>
+</td>
+<td>
+<select id="qualifications" name="qualifications">
+  <option value="option">Select</option>
+  <option value="mlis">MLIS</option>
+  <option value="b.lib">B.Lib</option>
+  </select><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="experience">Experience:<sup>*</sup></label>
+</td>
+<td>
+    <textarea name="experience" rows="3" cols="22"></textarea><br>
+</td>
+</tr>
+
+</table>
+</fieldset>
+</td>
+</tr>
+
+<tr align="center">
+<td>
+<fieldset class="third">
+<legend id="legend3">System Access Information</legend>
+<table>
+<tr>
+<td>
+    <label for="username">Username:<sup>*</sup></label>
+</td>
+<td>
+    <input type="text" id="username" name="username"><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="password">Password:<sup>*</sup></label>
+</td>
+<td>
+    <input type="password" id="password" name="password"> &nbsp;<p id="passError"></p><br>
+</td>
+</tr>
+
+<tr>
+<td>
+    <label for="confirmpassword">Confirm Password:<sup>*</sup></label>
+</td>
+<td>
+    <input type="password" id="confirmpassword" name="confirmpassword"><br>
+</td>
+</tr>
+
+<tr>
+<td>
+<label for="level">Role/Privilege Level:<sup>*</sup></label>
+</td>
+<td>
+<select id="level" name="level">
+  <option value="option">Select</option>
+  <option value="admin">Admin</option>
+  <option value="limited access">Limited Access</option>
+  </select><br>
+</td>
+</tr>
+
+<tr align="center">
+<td><br>
+    <input type="checkbox" id="inform" name="inform">
+    <label for="inform">I agree to the <font color="blue"> <b> Terms </b> </font> & <font color="blue"> <b> Policy </b> </label>
+</td>
+</tr>
+
+<tr align="center">
+<td>
+<input type="submit" value="Submit  >">
+<input type="reset" value="<  Reset">
+</td>
+</tr>
+</table>
+</fieldset>
+</td>
+</tr>
+
+</table>
+</form>
+<script src="../javaScript/task.js"></script>
+</body>
+</html>
+
